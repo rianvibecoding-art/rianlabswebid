@@ -12,7 +12,7 @@
 
     <script>
         (function() {
-            const CACHE_KEY = 'cepat_global_settings';
+            const CACHE_KEY = 'rianlabs_global_settings';
             const CACHE_AGE = 60 * 60 * 1000; 
 
             window.setMeta = (attrName, attrValue, content) => {
@@ -35,7 +35,7 @@
                 
                 if(data.site_name) {
                     if(!window.hasProductTitle) {
-                        document.title = document.title.replace(/Cepat Digital/gi, data.site_name).replace(/Cepat/gi, data.site_name);
+                        document.title = document.title.replace(/Rian Labs/gi, data.site_name).replace(/Cepat Digital/gi, data.site_name).replace(/Cepat/gi, data.site_name);
                         window.setMeta('property', 'og:title', data.site_name);
                         window.setMeta('name', 'title', data.site_name);
                     }
@@ -84,7 +84,7 @@
         })();
     </script>
     
-    <title>Checkout Premium - Cepat Digital</title>
+    <title>Checkout Premium - Rian Labs</title>
     <link rel="preload" as="style" href="tailwind.css?v=2026_1">
     <link rel="stylesheet" href="tailwind.css?v=2026_1">
     <script defer src="https://unpkg.com/lucide@0.577.0/dist/umd/lucide.min.js"></script>

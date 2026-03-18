@@ -10,7 +10,7 @@
     <script src="config.js?v=2026_1"></script>
     <script>
         (function() {
-            const CACHE_KEY = 'cepat_global_settings';
+            const CACHE_KEY = 'rianlabs_global_settings';
             const CACHE_AGE = 60 * 60 * 1000; 
             function applyGlobalSettings(data) {
                 if(data.site_favicon) {
@@ -19,7 +19,7 @@
                     link.href = data.site_favicon;
                 }
                 if(data.site_name) {
-                    document.title = document.title.replace(/Cepat Digital/gi, data.site_name).replace(/Cepat/gi, data.site_name);
+                    document.title = document.title.replace(/Rian Labs/gi, data.site_name).replace(/Cepat Digital/gi, data.site_name).replace(/Cepat/gi, data.site_name);
                 }
             }
             const cachedStr = localStorage.getItem(CACHE_KEY);
@@ -42,7 +42,7 @@
             }
         })();
     </script>
-    <title>Bio Link - Loading...</title>
+    <title>Bio Link - Rian Labs</title>
     <link rel="preload" as="style" href="tailwind.css?v=2026_1">
     <link rel="stylesheet" href="tailwind.css?v=2026_1">
     <script defer src="https://unpkg.com/lucide@0.577.0/dist/umd/lucide.min.js"></script>
@@ -100,7 +100,7 @@
 
         <!-- Branding Footer -->
         <div class="py-6 text-center text-[10px] font-bold text-slate-400 uppercase tracking-widest">
-            Powered by <span id="footer-brand">Cepat</span>
+            Powered by <span id="footer-brand">Rian Labs</span>
         </div>
 
     </div>
@@ -186,7 +186,7 @@
             document.getElementById('profile-name').innerText = data.display_name || 'Member';
             document.getElementById('profile-bio').innerText = data.bio || '';
             const _cachedBrand = localStorage.getItem(CACHE_SETTINGS);
-            document.getElementById('footer-brand').innerText = _cachedBrand ? (JSON.parse(_cachedBrand).data.site_name || 'Cepat') : 'Cepat';
+            document.getElementById('footer-brand').innerText = _cachedBrand ? (JSON.parse(_cachedBrand).data.site_name || 'Rian Labs') : 'Rian Labs';
 
             if (data.photo_url) {
                 document.getElementById('profile-img').src = data.photo_url;

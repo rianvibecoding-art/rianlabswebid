@@ -12,7 +12,7 @@
 
     <script>
         (function() {
-            const CACHE_KEY = 'cepat_global_settings';
+            const CACHE_KEY = 'rianlabs_global_settings';
             const CACHE_AGE = 60 * 60 * 1000; 
             window.waAdminGlobal = '';
 
@@ -1211,7 +1211,7 @@ src="https://www.facebook.com/tr?id=${pixelId}&ev=PageView&noscript=1"
                         if(r.data.settings) {
                             applyGlobalSettings(r.data.settings);
                             // Update juga cache global settings terpisah agar login page juga dapet update
-                            localStorage.setItem('cepat_global_settings', JSON.stringify({ data: r.data.settings, time: Date.now() }));
+                            localStorage.setItem('rianlabs_global_settings', JSON.stringify({ data: r.data.settings, time: Date.now() }));
                         }
                         renderDashboardUI(combinedData);
                     }
