@@ -13,10 +13,10 @@
  *       MEMBER_PASS below with your actual credentials.
  */
 
-const API_URL = 'https://cepat.icu/api';
+const API_URL = 'https://rianlabs.web.id/api';
 
 // ── Test Credentials ───────────────────────────────────────
-const ADMIN_EMAIL = 'admin@cepat.icu';
+const ADMIN_EMAIL = 'admin@rianlabs.web.id';
 const ADMIN_PASS = 'admin123';
 const MEMBER_EMAIL = 'bernaandya@gmail.com';
 const MEMBER_PASS = 'p9ki0c';
