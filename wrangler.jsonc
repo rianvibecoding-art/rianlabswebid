@@ -13,7 +13,7 @@
     "nodejs_compat"
   ],
   "vars": {
-    "ALLOWED_ORIGINS": "https://rianlabs.web.id,https://www.rianlabs.web.id",
+    "ALLOWED_ORIGINS": "https://rianlabs.web.id,https://www.rianlabs.web.id,https://rianlabs.web.id,https://www.rianlabs.web.id",
     "APP_GAS_URL": "https://script.google.com/macros/s/AKfycbzMOvRCXiHJyeTfp-X9GGhsX3UvXtjBgfe_SbeZgF0Se2yL7_GAnBEiM4Rcs3g16FB2/exec",
     "MOOTA_GAS_URL": "https://script.google.com/macros/s/AKfycbzbZ2uVuN1kr93pP-f8k5sTBK6ZlV8LbIx2HuYI4ufKqz7d9NL6HcnNqyFk7Gs6TANp/exec",
     "MOOTA_TOKEN": "L533Nt1k"
