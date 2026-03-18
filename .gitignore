@@ -1,0 +1,4 @@
+.wrangler/
+.env
+.env.*
+node_modules/

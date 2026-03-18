@@ -1,0 +1,21 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "cepattop",
+  "main": "_worker.js",
+  "compatibility_date": "2025-09-27",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "."
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "vars": {
+    "ALLOWED_ORIGINS": "https://cepat.icu,https://www.cepat.icu,https://cepat.top,https://www.cepat.top",
+    "APP_GAS_URL": "https://script.google.com/macros/s/AKfycbxYgl5ZRbAl-68PSy5G0Wl_kPw2q3TxgDzL4SKwr4PF0YteDYlamdVMx2kb2EkVqr5v/exec",
+    "MOOTA_GAS_URL": "https://script.google.com/macros/s/AKfycbzbZ2uVuN1kr93pP-f8k5sTBK6ZlV8LbIx2HuYI4ufKqz7d9NL6HcnNqyFk7Gs6TANp/exec",
+    "MOOTA_TOKEN": "L533Nt1k"
+  }
+}
