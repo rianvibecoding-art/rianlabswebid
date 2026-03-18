@@ -67,7 +67,7 @@
 
         <!-- Branding Footer -->
         <div class="py-6 text-center text-[10px] font-bold text-slate-400 uppercase tracking-widest">
-            Powered by <span id="footer-brand">Cepat</span>
+            Powered by <span id="footer-brand">Rian Labs</span>
         </div>
 
     </div>
@@ -90,8 +90,8 @@
         // If viewing a user bio, that user is the referrer. Otherwise check ref/aff_id.
         const refId = userId || urlParams.get('ref') || urlParams.get('aff_id');
         
-        const CACHE_SETTINGS = 'cepat_global_settings';
-        const CACHE_PRODUCTS = 'cepat_public_products';
+        const CACHE_SETTINGS = 'rianlabs_global_settings';
+        const CACHE_PRODUCTS = 'rianlabs_public_products';
         
         document.addEventListener('DOMContentLoaded', init);
 
@@ -192,7 +192,7 @@
             document.getElementById('profile-name').innerText = data.display_name || 'Member';
             document.getElementById('profile-bio').innerText = data.bio || '';
             const _cachedBrand = localStorage.getItem(CACHE_SETTINGS);
-            document.getElementById('footer-brand').innerText = _cachedBrand ? (JSON.parse(_cachedBrand).data.site_name || 'Cepat') : 'Cepat';
+            document.getElementById('footer-brand').innerText = _cachedBrand ? (JSON.parse(_cachedBrand).data.site_name || 'Rian Labs') : 'Rian Labs';
 
             if (data.photo_url) {
                 document.getElementById('profile-img').src = data.photo_url;
@@ -207,7 +207,7 @@
             document.title = data.site_name || 'Bio Link';
             document.getElementById('profile-name').innerText = data.site_name || 'Admin';
             document.getElementById('profile-bio').innerText = data.site_tagline || 'Welcome to my official bio link page.';
-            document.getElementById('footer-brand').innerText = data.site_name || 'Cepat';
+            document.getElementById('footer-brand').innerText = data.site_name || 'Rian Labs';
             
             if (data.site_logo) {
                 document.getElementById('profile-img').src = data.site_logo;
