@@ -53,6 +53,14 @@ function getCachedData_(key, fetcherFn, expirationInSeconds = 600) {
   return data;
 }
 
+function clearCache_(key) {
+  try {
+    CacheService.getScriptCache().remove(key);
+  } catch (e) {
+    console.error("Cache Remove Error for " + key + ": " + e.toString());
+  }
+}
+
 function getSettingsMap_() {
   return getCachedData_("settings_map", () => {
     const s = ss.getSheetByName("Settings");
@@ -1404,6 +1412,7 @@ function saveProduct(d) {
       for (let i = 1; i < r.length; i++) {
         if (String(r[i][0]).trim() === String(d.id).trim()) {
           s.getRange(i + 1, 1, 1, 12).setValues([dataRow]);
+          clearCache_("access_rules");
           return { status: "success" };
         }
       }
@@ -1417,6 +1426,7 @@ function saveProduct(d) {
         }
       }
       s.appendRow(dataRow);
+      clearCache_("access_rules");
       return { status: "success" };
     }
   } catch (e) {
@@ -1565,6 +1575,10 @@ function updateSettings(d) {
     }
     if (!f) s.appendRow([k, d.payload[k]]);
   }
+  
+  // Clear cache after update
+  clearCache_("settings_map");
+  
   return { status: "success" };
 }
 
